@@ -43,3 +43,29 @@ IMAGE_INSTALL += "\
     ${DEVTOOLS} \
     docker \
 "
+
+PIPEWIRE = " \
+    gstreamer1.0-pipewire \
+    libpipewire \
+    lua \
+    pipewire \
+    pipewire-alsa \
+    pipewire-alsa-card-profile \
+    pipewire-dev \
+    pipewire-modules-meta \
+    pipewire-pulse \
+    pipewire-spa-plugins-meta \
+    pipewire-spa-tools \
+    pipewire-tools \
+    speexdsp \
+    wireplumber \
+    wireplumber-dev \
+"
+
+IMAGE_INSTALL:append:am62dxx-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62xx-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62pxx-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62xx-lp-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62axx-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62xxsip-evm = " ${PIPEWIRE}"
+IMAGE_INSTALL:append:am62lxx-evm = " ${PIPEWIRE}"
