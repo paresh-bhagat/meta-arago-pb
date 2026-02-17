@@ -50,6 +50,23 @@ ZEROCONF_TI = "\
 	avahi-autoipd \
 "
 
+# PipeWire audio stack packages
+PIPEWIRE = " \
+    gstreamer1.0-pipewire \
+    libpipewire \
+    pipewire \
+    pipewire-alsa \
+    pipewire-alsa-card-profile \
+    pipewire-dev \
+    pipewire-modules-meta \
+    pipewire-pulse \
+    pipewire-spa-plugins-meta \
+    pipewire-spa-tools \
+    pipewire-tools \
+    wireplumber \
+    wireplumber-dev \
+"
+
 CONNECTIVITY_RDEPENDS = " \
     htop \
     iptables \
@@ -60,6 +77,7 @@ CONNECTIVITY_RDEPENDS = " \
     ${WLAN_COMMON} \
     ${WLAN_TI} \
     ${BT_COMMON} \
+    ${PIPEWIRE} \
 "
 
 CONNECTIVITY_RDEPENDS:append:ti33x = " ${BT_TI}"
